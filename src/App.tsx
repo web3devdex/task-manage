@@ -2,9 +2,10 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import Task from './Task'
 import _ from 'lodash'
-import axios from 'axios'
+// import axios from 'axios'
+import taskConfig from "./task.json"
 
-const url = "https://raw.githubusercontent.com/web3devdex/task-manage/refs/heads/main/task.json"
+// const url = "https://raw.githubusercontent.com/web3devdex/task-manage/refs/heads/main/task.json"
 
 function App() {
   const [tasks, setTasks] = useState<Task[]>([])
@@ -14,11 +15,7 @@ function App() {
   }, [])
 
   const loadData = async () => {
-    const res = await axios.get(url)
-    const data = JSON.parse(_.get(res, "data"))
-    console.log(res)
-    console.log(data)
-    setTasks(_.map(data, Task.fromLevel1) || [])
+    setTasks(_.map(taskConfig, Task.fromLevel1) || [])
   }
 
   console.log("tasks", tasks)
