@@ -35,11 +35,11 @@
                 "name": "2. APIs",
                 "value" : "https://kafka.apache.org/documentation/#gettingStarted",
                 "items": [
-                    [false, "producerapi", "https://kafka.apache.org/documentation/#producerapi"],
-                    [false, "consumerapi", "https://kafka.apache.org/documentation/#consumerapi"],
-                    [false, "streams", "https://kafka.apache.org/39/documentation/streams/"],
-                    [false, "connectapi", "https://kafka.apache.org/documentation/#connectapi"],
-                    [false, "adminapi", "https://kafka.apache.org/documentation/#adminapi"]
+                    [true, "producerapi", "https://kafka.apache.org/documentation/#producerapi"],
+                    [true, "consumerapi", "https://kafka.apache.org/documentation/#consumerapi"],
+                    [true, "streams", "https://kafka.apache.org/39/documentation/streams/"],
+                    [true, "connectapi", "https://kafka.apache.org/documentation/#connectapi"],
+                    [true, "adminapi", "https://kafka.apache.org/documentation/#adminapi"]
                 ]
             }
         ]
