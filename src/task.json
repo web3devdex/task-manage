@@ -22,11 +22,12 @@
                 "name": "1. Getting Started",
                 "value" : "https://kafka.apache.org/documentation/#gettingStarted",
                 "items": [
-                    [false, "introduction", "https://kafka.apache.org/documentation/#introduction"],
-                    [false, "uses", "https://kafka.apache.org/documentation/#uses"],
-                    [false, "quickstart", "https://kafka.apache.org/documentation/#quickstart" ],
-                    [false, "ecosystem", "https://kafka.apache.org/documentation/#ecosystem" ],
-                    [false, "docker", "https://kafka.apache.org/documentation/#docker" ]
+                    [true, "introduction", "https://kafka.apache.org/documentation/#introduction"],
+                    [true, "uses", "https://kafka.apache.org/documentation/#uses"],
+                    [true, "quickstart", "https://kafka.apache.org/documentation/#quickstart" ],
+                    [true, "ecosystem", "https://kafka.apache.org/documentation/#ecosystem" ],
+                    [true, "docker", "https://kafka.apache.org/documentation/#docker" ],
+                    [true, "ecosystem", "https://cwiki.apache.org/confluence/display/KAFKA/Ecosystem" ]
                 ]
             },
              {
