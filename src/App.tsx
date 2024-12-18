@@ -17,12 +17,12 @@ function App() {
         {
           _.map(tasks, (task: Task) => {
             return <li>
-              <a href={task.value}>{task.name}</a>
+              <a href={task.value}>{`${task.name} ${task.process}`}</a>
               <ul>
                 {
                   _.map(task.items, (item: Task) => {
                     return <li>
-                      <a href={item.value}>{item.name}</a>
+                      <a href={item.value}>{`${item.name} ${item.process}`}</a>
                       <ul >
                         {
                           _.map(item.items, (row: Task) => {
@@ -30,7 +30,7 @@ function App() {
                               {
                                 row.status == true ? <span>(v)</span> : <span>...</span>
                               }
-                              <a style={{marginLeft: 10}} href={row.value}>{row.name}</a>
+                              <a style={{ marginLeft: 10 }} href={row.value}>{row.name}</a>
                             </li>
                           })
                         }

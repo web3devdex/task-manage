@@ -5,6 +5,9 @@ class Task {
     public value: string = "";
     public status: boolean = false;
     public items: Task[] = [];
+    public total: number = 0;
+    public done: number = 0;
+    public process: string = "";
 
     public static fromItem(req: any): Task {
         const res = new Task()
@@ -19,6 +22,11 @@ class Task {
         res.name = _.get(req, "name") || ""
         res.value = _.get(req, "value") || ""
         res.items = _.map(_.get(req, "items"), Task.fromLevel2)
+        const total = _.sum(_.map(res.items, "total"))
+        const done = _.sum(_.map(res.items, "done"))
+        res.total = total
+        res.done = done
+        res.process = `${done}/${total}`
         return res
     }
 
@@ -27,6 +35,11 @@ class Task {
         res.name = _.get(req, "name") || ""
         res.value = _.get(req, "value") || ""
         res.items = _.map(_.get(req, "items"), Task.fromItem)
+        const total = _.size(res.items)
+        const done = _.size(_.filter(res.items, (i: Task) => i.done))
+        res.total = total
+        res.done = done
+        res.process = `${done}/${total}`
         return res
     }
 
