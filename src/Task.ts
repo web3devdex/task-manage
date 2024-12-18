@@ -36,7 +36,7 @@ class Task {
         res.value = _.get(req, "value") || ""
         res.items = _.map(_.get(req, "items"), Task.fromItem)
         const total = _.size(res.items)
-        const done = _.size(_.filter(res.items, (i: Task) => i.done))
+        const done = _.size(_.filter(res.items, (i: Task) => i.status))
         res.total = total
         res.done = done
         res.process = `${done}/${total}`
