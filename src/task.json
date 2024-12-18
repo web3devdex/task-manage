@@ -27,7 +27,8 @@
                     [true, "quickstart", "https://kafka.apache.org/documentation/#quickstart" ],
                     [true, "ecosystem", "https://kafka.apache.org/documentation/#ecosystem" ],
                     [true, "docker", "https://kafka.apache.org/documentation/#docker" ],
-                    [true, "ecosystem", "https://cwiki.apache.org/confluence/display/KAFKA/Ecosystem" ]
+                    [true, "ecosystem", "https://cwiki.apache.org/confluence/display/KAFKA/Ecosystem" ],
+                    [false, "strimzi_k8s", "https://strimzi.io/" ]
                 ]
             },
              {
