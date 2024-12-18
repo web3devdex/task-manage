@@ -1,13 +1,24 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
-import taskJson from "./task.json"
 import Task from './Task'
 import _ from 'lodash'
+import axios from 'axios'
 
-const taskJsonList: Task[] = _.map(taskJson, Task.fromLevel1) || []
+const url = "https://raw.githubusercontent.com/web3devdex/task-manage/refs/heads/main/src/task.json"
 
 function App() {
-  const [tasks] = useState<Task[]>(taskJsonList)
+  const [tasks, setTasks] = useState<Task[]>([])
+
+  useEffect(() => {
+    loadData()
+  }, [])
+
+  const loadData = async () => {
+    const res = await axios.get(url)
+    const data = _.get(res, "data")
+    setTasks(_.map(data, Task.fromLevel1) || [])
+    console.log(res)
+  }
 
   console.log("tasks", tasks)
 
