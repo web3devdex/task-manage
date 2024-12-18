@@ -4,7 +4,7 @@ import Task from './Task'
 import _ from 'lodash'
 import axios from 'axios'
 
-const url = "https://raw.githubusercontent.com/web3devdex/task-manage/refs/heads/main/src/task.json"
+const url = "https://raw.githubusercontent.com/web3devdex/task-manage/refs/heads/main/task.json"
 
 function App() {
   const [tasks, setTasks] = useState<Task[]>([])
@@ -15,9 +15,10 @@ function App() {
 
   const loadData = async () => {
     const res = await axios.get(url)
-    const data = _.get(res, "data")
-    setTasks(_.map(data, Task.fromLevel1) || [])
+    const data = JSON.parse(_.get(res, "data"))
     console.log(res)
+    console.log(data)
+    setTasks(_.map(data, Task.fromLevel1) || [])
   }
 
   console.log("tasks", tasks)
