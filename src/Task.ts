@@ -11,9 +11,9 @@ class Task {
 
     public static fromItem(req: any): Task {
         const res = new Task()
-        res.name = _.get(req, "name") || ""
-        res.value = _.get(req, "value") || ""
-        res.status = _.get(req, "status") || false
+        res.status = _.get(req, "0") || false
+        res.name = _.get(req, "1") || ""
+        res.value = _.get(req, "2") || ""
         return res
     }
 
