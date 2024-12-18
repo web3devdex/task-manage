@@ -7,9 +7,37 @@
                 "name": "Flink",
                 "value" : "https://nightlies.apache.org/flink/flink-docs-release-1.20/",
                 "items": [
-                    [true, "First steps", "https://nightlies.apache.org/flink/flink-docs-release-1.20/docs/try-flink/local_installation/"],
+                    [true,  "First steps", "https://nightlies.apache.org/flink/flink-docs-release-1.20/docs/try-flink/local_installation/"],
                     [false, "Fraud Detection with the DataStream API", "https://nightlies.apache.org/flink/flink-docs-release-1.20/docs/try-flink/datastream/"],
-                    [false,"Datastream Overview", "https://nightlies.apache.org/flink/flink-docs-release-1.20/docs/dev/datastream/overview/" ]
+                    [false, "Datastream Overview", "https://nightlies.apache.org/flink/flink-docs-release-1.20/docs/dev/datastream/overview/" ]
+                ]
+            }
+        ]
+    },
+    {
+        "name": "kafka",
+        "value":  "https://kafka.apache.org/documentation/#introduction",
+        "items" : [
+            {
+                "name": "1. Getting Started",
+                "value" : "https://kafka.apache.org/documentation/#gettingStarted",
+                "items": [
+                    [false, "introduction", "https://kafka.apache.org/documentation/#introduction"],
+                    [false, "uses", "https://kafka.apache.org/documentation/#uses"],
+                    [false, "quickstart", "https://kafka.apache.org/documentation/#quickstart" ],
+                    [false, "ecosystem", "https://kafka.apache.org/documentation/#ecosystem" ],
+                    [false, "docker", "https://kafka.apache.org/documentation/#docker" ]
+                ]
+            },
+             {
+                "name": "2. APIs",
+                "value" : "https://kafka.apache.org/documentation/#gettingStarted",
+                "items": [
+                    [false, "producerapi", "https://kafka.apache.org/documentation/#producerapi"],
+                    [false, "consumerapi", "https://kafka.apache.org/documentation/#consumerapi"],
+                    [false, "streams", "https://kafka.apache.org/39/documentation/streams/"],
+                    [false, "connectapi", "https://kafka.apache.org/documentation/#connectapi"],
+                    [false, "adminapi", "https://kafka.apache.org/documentation/#adminapi"],
                 ]
             }
         ]
